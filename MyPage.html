@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jayadeep Reddy | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      animation: fadeInBody 1.2s ease-in-out;
+    }
+    @keyframes fadeInBody {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    header {
+      padding: 2rem;
+      text-align: center;
+      background-color: #111;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    p.subtitle {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+    .container {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .project {
+      background-color: #1c1c1c;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+      transition: transform 0.3s, background-color 0.3s;
+      animation: slideUp 1s ease forwards;
+      opacity: 0;
+    }
+    @keyframes slideUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .project:hover {
+      background-color: #2c2c2c;
+      transform: translateY(-4px);
+    }
+    h2 {
+      margin-top: 0;
+    }
+    .btn, .toggle-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #00bcd4;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+    .btn:hover, .toggle-btn:hover {
+      background-color: #00acc1;
+      transform: scale(1.05);
+    }
+    .description {
+      display: none;
+      margin-top: 1rem;
+      color: #ddd;
+      line-height: 1.6;
+    }
+    .contact {
+      text-align: center;
+      margin-top: 3rem;
+      animation: fadeInContact 1.2s ease-in-out;
+    }
+    @keyframes fadeInContact {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    a {
+      color: #00bcd4;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Jayadeep Reddy Muga</h1>
+  <p class="subtitle">Full Stack Developer | Java • Spring Boot • Angular • Python • OpenAI</p>
+</header>
+
+<div class="container">
+
+  <div class="project">
+    <h2>🛍️ E-Commerce Web Application</h2>
+    <p>Built a full-featured e-commerce platform using Spring Boot (REST APIs) and Angular.</p>
+    <button class="toggle-btn" onclick="toggleDesc(this)">Show More</button>
+    <div class="description">
+      <p>Developed a scalable shopping platform with authentication, product catalog, cart, and checkout. Backend APIs were developed in Spring Boot with PostgreSQL as the database. The frontend was implemented in Angular and styled using Bootstrap. The project was containerized using Docker and deployed on AWS EC2.</p>
+      <a class="btn" href="https://github.com/Jayamuga/E-commerce/tree/master" target="_blank">View on GitHub</a>
+    </div>
+  </div>
+
+  <div class="project">
+    <h2>🏢 Accenture | Java Developer</h2>
+    <p>Built enterprise-grade microservices and automated deployments.</p>
+    <button class="toggle-btn" onclick="toggleDesc(this)">Show More</button>
+    <div class="description">
+      <p>Worked on Java 11-based microservices using Spring Boot. Implemented REST APIs with secure JWT authentication and role-based access. Managed databases using Oracle and PostgreSQL. Used Docker for deployment and GitLab CI for automation. Participated in Agile ceremonies, code reviews, and testing using JUnit and JMeter.</p>
+    </div>
+  </div>
+
+  <div class="project">
+    <h2>🤖 Chatbot with OpenAI API</h2>
+    <p>Created an intelligent chatbot using GPT model for student queries.</p>
+    <button class="toggle-btn" onclick="toggleDesc(this)">Show More</button>
+    <div class="description">
+      <p>Built a conversational chatbot in Python with OpenAI API integration for dynamic responses. Deployed the app on AWS EC2 and integrated it with a responsive HTML/CSS UI. Focused on prompt engineering, error handling, and performance tuning. Collaborated using Agile methods and managed API versioning and testing cycles.</p>
+    </div>
+  </div>
+
+  <div class="project">
+    <h2>📊 Digital Workplace Enablement</h2>
+    <p>Streamlined productivity using Microsoft 365 & automation tools.</p>
+    <button class="toggle-btn" onclick="toggleDesc(this)">Show More</button>
+    <div class="description">
+      <p>Led digital enablement using Power Automate and SharePoint. Built workflows that automated Microsoft Forms data collection and notification processes. Supported onboarding using Teams and OneDrive, and documented guides to improve student adoption and collaboration. This project focused on no-code/low-code solutions for scalable internal tools.</p>
+    </div>
+  </div>
+
+  <div class="contact">
+    <p>📧 <a href="mailto:Jayadeep.Muga@gmail.com">Jayadeep.Muga@gmail.com</a> | 📱 +1 603-264-0616</p>
+    <p>
+      <a href="https://github.com/Jayamuga" class="btn">GitHub</a>
+      <a href="https://www.linkedin.com/in/jayadeep-muga/" class="btn">LinkedIn</a>
+      <a href="JayaDeep-SoftwareDeveloper-Resume.pdf" class="btn" download>Download Resume</a>
+    </p>
+  </div>
+
+</div>
+
+<script>
+  function toggleDesc(button) {
+    const desc = button.nextElementSibling;
+    const isVisible = desc.style.display === 'block';
+    desc.style.display = isVisible ? 'none' : 'block';
+    button.textContent = isVisible ? 'Show More' : 'Show Less';
+  }
+
+  // Animate project cards on load
+  window.addEventListener('DOMContentLoaded', () => {
+    const projects = document.querySelectorAll('.project');
+    projects.forEach((card, index) => {
+      card.style.animationDelay = `${index * 0.3}s`;
+      card.style.opacity = 1;
+    });
+  });
+</script>
+
+</body>
+</html>
